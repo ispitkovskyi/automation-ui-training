@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke suite">
+    <test name="Run browser and go to URL">
+        <classes>
+            <class name="framework.Browser">
+                <methods>
+                    <include name="goToUrl"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Fill contact data">
+        <classes>
+            <class name="tests.ContactTest">
+                <methods>
+                    <include name="fillContactData"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Open About box">
+        <classes>
+            <class name="tests.AboutTest">
+                <methods>
+                    <include name="openAbout"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+	<test name="Quite browser and driver">
+        <classes>
+            <class name="framework.Browser">
+                <methods>
+                    <include name="close"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
